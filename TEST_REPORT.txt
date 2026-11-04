@@ -1,0 +1,97 @@
+PDF Studio navigation fix — 2026-11-04
+Reproduced IndexError from actual sidebar click with empty/single selection before fix.
+After fix: all 5 desktop/Studio tests passed on Tk 8.6 (2.705 s) and Tk 9 (3.015 s).
+Includes empty workspace without a file dialog, one/multiple selected PDFs, actual Studio
+editing/preview, RTL layout and queue pause/preset controls. Logs: studio-fix-tk86.txt,
+studio-fix-tk9.txt. Windows execution remains pending. Bundled Linux report below predates
+this UI-only fix; source installer and SDK wheel rebuilt with the corrected handler.
+
+PuryF v1 (1.0.0) — validation 2026-11-04
+
+121 automated tests passed on Linux / Python 3.12 / Tk 8.6 (30.408 s).
+121 automated tests passed on Linux / Python 3.12 / Tk 9.0.4 (30.360 s).
+No skips. Logs: test-v1-release-tk86.txt and test-v1-release-tk9.txt.
+
+V1 verification covers real PDF arrangement, rotation, extraction, source protection,
+clickable course contents/bookmarks/numbering, stamps, metadata removal, image export,
+Unicode text review, target compression metrics, queue pause/cancel, quality/naming,
+folder preservation, presets/history/repeat, redacted diagnostics, watches/schedules,
+background controls, trusted plugins, CLI commands and actual Tk Studio/RTL controls.
+Existing conversion, Explorer IPC, CLI, MCP and HTTP regressions remain in the suite.
+An additional protected-history check refused repeat without a fresh password and
+confirmed history excludes the password. Screenshots refreshed and visually reviewed.
+
+Distribution verification:
+- Native Linux PyInstaller bundle smoke: release/bundle-smoke.json.
+  Bundled conversion (including Arabic), PDFium rendering/image export, MCP initialize
+  and authenticated loopback API. This does not certify Windows executables.
+- Python-required source fallback compiled using NSIS; not executed on Windows.
+- Python SDK wheel built; native Windows standalone build pipeline supplied.
+
+NOT VALIDATED HERE:
+Native Windows standalone/portable binaries; clean-PC/no-Python Windows installation;
+Windows registry/PATH/Office; physical scrolling, touchpad, DPI and notifications;
+external OCR/media engines/models; third-party MCP clients; public hosting/load/isolation.
+Complex PDF form/signature/attachment fidelity requires representative-file review.
+
+Historical integration evidence follows; superseded by full v1 suite above:
+
+PuryF 0.5.0-alpha.1 — MCP, local API and hosted-workflow preview
+Validation date: 2026-11-04
+
+RESULT
+102 automated tests passed on Linux / Python 3.12 with Tk 8.6 (28.021 s)
+and Tk 9.0.4 (23.188 s). No skipped tests in either full run.
+Final folder-reparse/config validation changes were followed by a focused rerun:
+25 integration tests passed (3.446 s), including final webhook shutdown recovery changes. Node validated browser JavaScript syntax.
+Installer compiled with NSIS 3.09; Windows PE signature checked; not executed on Windows.
+
+NEW INTEGRATION VERIFICATION (25 tests beyond the previous 77)
+- Real loopback HTTP token authentication, Origin/Host restrictions and CORS allowlist.
+- Single and multi-file binary uploads, background conversion, status/results polling,
+  individual PDF bytes, ZIP entries, signed temporary links, cancellation and idempotent replay.
+- Different customer keys cannot access another customer's uploads, status, cancellation,
+  result assets or link creation. Unknown/cross-customer jobs return not-found.
+- Concurrent same-key submissions produce one job; conflicting content returns conflict.
+- Local folder policy rejects outside/traversal/linked paths; managed outputs stay private.
+- Hosted Office/HTML routes and false image content are rejected; filename traversal/Windows
+  reserved names refused. File/request/storage/customer job/rate limits enforced.
+- PDF merge/split and output encryption use the existing service; plaintext passwords and
+  private server paths/logs/reports are absent from public job snapshots.
+- Cancellation prevents new commits; retention removes expired outputs/uploads/history and
+  preserves active-job inputs; output quota failures cannot expose deleted results.
+- Completed results/idempotency survive restart; reserved unfinished jobs fail without replay.
+- HMAC webhook headers verified; account-scoped presets, durable claim/retry/delivery state,
+  and no-redirect behavior tested with a mock HTTPS sender (no external receiver contacted).
+- Modern MCP discovery/per-request metadata and legacy initialize/initialized tool listing/calls.
+- Permitted conversion/status/results and denied paths through MCP; unknown methods/versions.
+- Real stdio child process produces JSON-RPC lines only and shuts down on EOF.
+- Data-directory owner exclusion; bad/empty keys and hosted Office opt-in refused.
+- Oversized and chunked HTTP request rejection.
+
+EXISTING REGRESSIONS (77 retained)
+Desktop/Explorer/CLI/core jobs and conversions, PDF tools, source/output safety, dependency
+preflight, JSON, request files, progress, signals, process coordination, PATH ownership,
+Office worker lifecycle mock, reports, real text/images/email/PDF/OCR, themes, keyboard,
+synthetic scrolling, ZIP safety, sessions, resizing and installer guards.
+
+PACKAGE
+Source and tests; original dark/light branding/screenshots; compiled Python-required
+Windows installer; public MCP/local/hosted configuration templates; OpenAPI reference;
+browser upload/progress/download demo and Python client; hosting/capacity/cost model;
+unbuilt reference Docker/Compose staging templates. Servers do not start automatically.
+Installer guard now includes idle MCP/API host registrations as well as conversion locks.
+
+LIMITS / NOT CLAIMED
+No actual cloud account, public hosting, storage service, domain, TLS endpoint or paid
+resource was provisioned. No Docker build/load test or physical-browser UI test completed.
+The browser demo passed syntax checks; its API workflows have real HTTP tests.
+No third-party MCP client compatibility certification. MCP Streamable HTTP deferred.
+Windows registry/PATH, native file locks/reparse points, actual install/upgrade/uninstall,
+console forwarding/Ctrl+C, real Office, physical input and display scaling still need native tests.
+The POSIX signal test is intentionally skipped when the suite runs on Windows.
+The hosted mode is a single-host developer preview with logical tenant isolation.
+A production HTTP frontend, isolated hostile-document workers, durable multi-host queue,
+public website customer-login/key provisioning and deployment hardening remain future work.
+Office automation is disabled for hosted uploads. No production security/isolation claim.
+See MCP_API.md and HOSTING.md for contracts, cleanup/delivery semantics and deployment boundary.

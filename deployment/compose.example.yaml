@@ -1,0 +1,23 @@
+# Linux reference only. Bind a TLS reverse proxy on the host to 127.0.0.1:8765.
+# Do not expose this preview directly to untrusted public uploads.
+services:
+  puryf:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    network_mode: host
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    mem_limit: 4g
+    cpus: 2
+    pids_limit: 64
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    env_file: server.env
+    volumes:
+      - ./server.json:/etc/puryf/server.json:ro
+      - ./data:/var/lib/puryf/data
+    restart: unless-stopped

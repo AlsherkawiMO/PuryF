@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "command": "convert",
+  "inputs": ["notes.txt"],
+  "options": {"output_folder": "pdf-output", "overwrite": false}
+}

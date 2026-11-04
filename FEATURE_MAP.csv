@@ -1,0 +1,51 @@
+﻿Existing capability,Redesigned location
+File/folder/clipboard/ZIP input,"Convert: Add files, Add folder, drop target and Ctrl+V; safety limits preserved"
+Queue reordering and multiselection,"Queue actions, row dragging, Ctrl/Shift clicking and original shortcuts"
+Remove/duplicate/retry/cleanup,Queue actions plus existing row context menu
+Source/output navigation,Row context menu and original Enter shortcuts
+Office export,"Original engine: Word, Excel, PowerPoint, Visio, Publisher, Project; MSG via Outlook"
+Image formats and pages,Original engine; Advanced settings: image paper size
+Text/email/calendar/contact,Original engine; Unicode and Arabic support retained with dependencies
+Web/ebook/diagram/media,Original engine and dependency explanations; CAD and .url limitations retained
+Output folder and overwrite,"Convert: path, Browse, Open folder, overwrite toggle; safe writes unchanged"
+Merge/compress/OCR after conversion,Convert: four main processing checkboxes
+PowerPoint layouts and dates,Advanced settings: all eight layouts and all three date modes
+Excel width / OCR languages,Advanced settings with original variables and engine settings
+Password protection / visibility,Advanced settings; manual tools reuse the same protection settings
+Manual PDF merge/split,"PDF tools: browse merge, queue selection merge and split/extract dialogs"
+Progress / start / stop,"Fixed bottom action bar, original F5/F8 worker and cancellation logic"
+Activity log / reports,"Expandable Activity log: Save log, Clear log, Reports folder"
+Session restoration,Original automatic load/save; theme added; passwords still never persisted
+Dependencies,Live Dependencies screen and refresh; requirements for current queue
+Keyboard controls,Original bindings retained; Shortcuts navigation action documents them
+Scrolling,"Early Tk bind tag, fractional wheel accumulation, supported TouchpadScroll and independent queue/log/dependency scroll"
+Resizing and themes,"Scrollable content with fixed action bar, light/dark palette and logo variants"
+Shared conversion core,puryf/engine.py and puryf/pdf_tools.py; headless import
+Validated options,puryf/options.py ConversionOptions
+Jobs and cancellation,puryf/jobs.py ConversionService / JobHandle
+One coordinated worker,Shared FIFO and Office-owning worker; desktop submits jobs
+Adapter boundary,ARCHITECTURE.md; Explorer forwards to owner; future CLI/MCP/HTTP can share it
+Explorer single and mixed conversion,puryf/explorer.py + desktop.accept_explorer; Implemented
+Explorer queue without start,desktop.accept_explorer; Implemented
+Single window and incoming batches,puryf/explorer.py; Implemented
+Optional classic menu registration and cleanup,installer/puryf.nsi; Implemented; native Windows validation pending
+CLI GUI launch,puryf.cli gui delegates to the existing desktop launcher
+CLI file and folder batches,puryf.cli convert; deterministic recursive expansion
+CLI merge and split,puryf.cli merge/split submit shared PDF-tool jobs
+CLI doctor and JSON,puryf.cli doctor; structured job results and meaningful exit codes
+Large batch request files,puryf.cli request; versioned strict JSON schema
+Cross-process conversion coordination,puryf.jobs worker lease; one converter host at a time
+Optional command on PATH,installer/path_setup.py; preserves unrelated user PATH entries
+Local stdio MCP,puryf.mcp_server; modern/legacy tools and controlled roots
+Optional local HTTP API,puryf.http_server and gateway; bearer auth and managed outputs
+Hosted upload workflow preview,puryf.gateway; tenant ownership limits idempotency and persistent results
+Temporary downloads and ZIP,puryf.gateway asset/link methods
+Completion webhooks,puryf.webhooks; account presets signatures bounded durable retry
+Automatic retention cleanup,puryf.gateway maintenance; pins active inputs and forgets terminal history
+Website integration examples,website/index.html and python_client.py
+Hosted deployment and cost planning,HOSTING.md and deployment templates; public hardening remains
+PDF Studio,puryf/documents.py; puryf/studio.py; Implemented in source; see README for platform limits
+Automation and presets,puryf/automation.py; puryf/state.py; Implemented in source; see README for platform limits
+Python SDK and extensions,puryf/sdk.py; puryf/extensions.py; Implemented in source; see README for platform limits
+Arabic RTL,puryf/i18n.py; puryf/workbench.py; Implemented in source; see README for platform limits
+Standalone build pipeline,build_tools/build_standalone.py; installer/standalone.nsi; Implemented in source; see README for platform limits

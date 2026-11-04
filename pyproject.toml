@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "puryf"
+version = "1.0.0"
+description = "Local PDF conversion, document tools and automation"
+authors = [{name = "AlsherkawiMO"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dynamic = ["dependencies"]
+
+[project.scripts]
+puryf = "puryf.cli:main"
+puryf-gui = "puryf.launchers:gui_main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+include = ["puryf*"]
+
+[tool.setuptools.package-data]
+puryf = ["assets/*"]

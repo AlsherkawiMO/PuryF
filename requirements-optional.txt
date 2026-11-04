@@ -1,0 +1,7 @@
+# Optional image/video formats; install only the formats you need.
+-r requirements.txt
+CairoSVG>=2.7
+pillow-heif>=0.18
+rawpy>=0.20
+opencv-python>=4.8
+# OCR, Calibre, draw.io and Whisper also require their external programs/models.

@@ -1,0 +1,3 @@
+PuryF CLI demo
+Your files. Simply PDF.
+This example converts locally without Office.

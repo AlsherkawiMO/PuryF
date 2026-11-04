@@ -1,0 +1,78 @@
+PuryF v1 standalone release gate
+
+[ ] Build on native 64-bit Windows using Build_Standalone_Windows.bat (Python 3.12 + NSIS).
+[ ] Verify main installer and portable ZIP include both EXEs, runtime, assets and notices.
+[ ] Test on a clean Windows VM with no Python: run Verify_Clean_PC.bat, then GUI conversion.
+[ ] Test fresh/upgrade/uninstall, Explorer opt-in, PATH opt-in and profile preservation.
+[ ] Test portable extraction/move, writable Data and read-only folder override.
+[ ] Test actual English/Arabic fonts, RTL, preview, thumbnails, display scaling and notifications.
+[ ] Test Office/OCR/media external dependencies independently; they are not bundled.
+[ ] Keep Windows results and checksums before making the standalone installer the main download.
+
+Final checks on the target Windows PC
+
+[ ] Run Start_PuryF.bat and confirm the orange cat logo and window icon.
+[ ] Switch both themes. Resize at 100%, 125%, 150% and 200% display scaling.
+[ ] Test a physical mouse wheel and two-finger touchpad gestures over the main page, queue and log.
+[ ] Test Shift+wheel for the queue's horizontal scroll, and scroll the Advanced settings into view.
+[ ] Drop a file, folder and ZIP from Explorer after installing tkinterdnd2.
+[ ] Use Ctrl/Shift clicks, Ctrl+A, Ctrl+D, Delete, Ctrl+R and the reorder shortcuts.
+[ ] Verify that editing a password/output path does not trigger queue shortcuts.
+[ ] Convert representative DOCX, XLSX, PPTX and other Office files using your installed Office apps.
+[ ] Check each required PowerPoint layout and date option; check Excel fit-to-width.
+[ ] Verify image conversion, PDF merge/split, compression and password protection.
+[ ] Install required OCR languages and check English/Arabic scanned documents.
+[ ] Verify optional Calibre, draw.io, Whisper/FFmpeg and video routes if needed.
+[ ] Stop a long conversion and close while work is active; confirm clean shutdown.
+[ ] Restart and verify queue/settings restore, with passwords excluded.
+[ ] Run Verify_Windows.bat for repeatable automated regression checks.
+
+These physical/Windows-specific checks have not been completed in the Linux development environment.
+
+Explorer milestone (0.3.0-alpha.1)
+[ ] Close all legacy copies. Install into a path with spaces and non-ASCII characters.
+[ ] Fresh install: Explorer component is OFF; verbs are absent. Repeat with component ON.
+[ ] Right-click TXT/image/Office files individually and mixed. Windows 11: Show more options.
+[ ] Test 1, 15, 16 and 100 files; every supported path reaches one window, none are lost.
+[ ] Confirm the legacy >100-file limit is documented; desktop import still handles larger batches.
+[ ] Test Unicode, spaces, parentheses, &, %, !, apostrophes and long source paths.
+[ ] Start menu and a second Start_PuryF.bat bring up one existing window.
+[ ] Send more Convert and Add-to-queue batches during a slow Office conversion.
+[ ] Queue-only rows remain waiting after earlier jobs finish; Start processes them later.
+[ ] Change GUI output/password/merge settings; Explorer Convert still uses fixed defaults.
+[ ] Check duplicates, missing dependencies, unsupported files, existing outputs and read-only folders.
+[ ] Cancel active work; close while new batches arrive; reopen and inspect pending recovery.
+[ ] Force-close PuryF; next launch acquires the released OS lock and starts one window.
+[ ] Upgrade in place with Explorer selected, and again deselected; choice/verbs match.
+[ ] Setup/uninstall refuse while a 0.3 desktop is open; manually close pre-0.3 versions too.
+[ ] Uninstall removes owned verbs and IPC files, preserves documents/results/session and other apps' keys.
+[ ] Inspect both HKCU\Software\Classes\*\shell\PuryF.* keys with reg query if needed.
+
+CLI milestone (0.4.0-alpha.1)
+[ ] Install with/without Terminal puryf command on user PATH; new terminal finds command only when selected.
+[ ] Check puryf --help / --version / gui from CMD and Windows Terminal.
+[ ] Verify quoted paths with spaces, Arabic, &, %, ! and parentheses; request files for unusual/long lists.
+[ ] Convert individual/mixed files, shallow folders and recursive folders; output subtree is excluded.
+[ ] Test all required Office formats and dependency diagnostics with installed Office/pywin32.
+[ ] Merge/split PDFs and encrypted sources with input-password-env; no secret in JSON/report.
+[ ] Verify stdout JSON parses as one object; progress stays on stderr in human mode.
+[ ] Verify exit codes 0/1/2/3/4/5/130 via echo %errorlevel% in CMD.
+[ ] Ctrl+C while waiting, converting an external process, and during an Office call; cleanup completes.
+[ ] Run CLI alongside desktop and another CLI; only one conversion host runs at a time.
+[ ] Setup/uninstall refuse active 0.4 conversions; close legacy releases manually.
+[ ] Upgrade preserves PATH component choice; deselect/uninstall remove only PuryF's added entry.
+[ ] Preserve a long expandable user PATH and later edits by another app across upgrade/uninstall.
+[ ] PATH changes may need a new terminal host; existing sessions keep their environment snapshot.
+
+MCP/API milestone (0.5.0-alpha.1)
+[ ] Connect a real MCP client with the installed private Python and edited permitted-root config.
+[ ] Test modern and legacy negotiation, job polling/cancellation/results and stdout purity.
+[ ] Verify outside roots, symlinks/junctions and invalid output/overwrite options are rejected.
+[ ] Start local API with a random environment key; verify token/Origin/Host restrictions.
+[ ] Run local paths, hosted uploads and website demo; inspect PDF/ZIP downloads and temporary links.
+[ ] Verify different customer keys cannot access each other's uploads/jobs/downloads/cancellation.
+[ ] Test expiration/restart/cancellation under native Windows file locks and open download handles.
+[ ] Exercise an administrator webhook preset on the deployment network; verify signature/deduplication.
+[ ] Rebuild/upgrade/uninstall with new package files; server data/configs are intentionally retained.
+[ ] Close MCP/API servers before upgrade/uninstall; do not run versions sharing a data directory.
+[ ] Complete HOSTING.md's production work before exposing unrestricted public uploads.

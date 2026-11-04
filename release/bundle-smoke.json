@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "command": "self-test",
+  "exit_code": 0,
+  "self_test": {
+    "version": "1.0.0",
+    "platform": "Windows",
+    "frozen": true,
+    "core_passed": true,
+    "clean_pc_confirmed": false,
+    "checks": [
+      "text conversion",
+      "PDF rendering",
+      "image export",
+      "MCP initialization",
+      "authenticated local API"
+    ],
+    "external_converters": "not tested; Office/OCR/media tools remain separate installations",
+    "executable_sha256": "02633d37ae351b60d8ec287ba3422c4241ad299f06bcdcaa191cf745b000c26c"
+  }
+}

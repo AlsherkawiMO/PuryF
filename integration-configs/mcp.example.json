@@ -1,0 +1,8 @@
+{
+  "mode": "mcp",
+  "data_dir": "C:/Users/YOUR_NAME/AppData/Local/PuryF/MCP-data",
+  "read_roots": [
+    "C:/Users/YOUR_NAME/Documents/Conversion-inputs"
+  ],
+  "allow_office": false
+}

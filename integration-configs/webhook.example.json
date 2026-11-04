@@ -1,0 +1,7 @@
+{
+  "partner-completion": {
+    "account": "customer-a",
+    "url": "https://your-service.example/puryf-completed",
+    "secret_env": "PURYF_WEBHOOK_SECRET"
+  }
+}

@@ -1,0 +1,30 @@
+test_cancellation_no_new_commit_and_deadline (test_integrations.GatewayTests.test_cancellation_no_new_commit_and_deadline) ... ok
+test_cleanup_keeps_an_active_jobs_expired_upload_until_terminal (test_integrations.GatewayTests.test_cleanup_keeps_an_active_jobs_expired_upload_until_terminal) ... ok
+test_cleanup_preserves_active_inputs_and_removes_expired_results (test_integrations.GatewayTests.test_cleanup_preserves_active_inputs_and_removes_expired_results) ... ok
+test_config_invalid_tokens_and_hosted_office_opt_in_are_refused (test_integrations.GatewayTests.test_config_invalid_tokens_and_hosted_office_opt_in_are_refused) ... ok
+test_folder_policy_denies_outside_traversal_and_symlinks (test_integrations.GatewayTests.test_folder_policy_denies_outside_traversal_and_symlinks) ... ok
+test_gateway_refuses_shared_data_directory_owner (test_integrations.GatewayTests.test_gateway_refuses_shared_data_directory_owner) ... ok
+test_hosted_merge_split_and_output_password_redaction (test_integrations.GatewayTests.test_hosted_merge_split_and_output_password_redaction) ... ok
+test_hosted_rejects_paths_office_scripts_and_false_document_content (test_integrations.GatewayTests.test_hosted_rejects_paths_office_scripts_and_false_document_content) ... ok
+test_http_rejects_oversized_and_chunked_bodies (test_integrations.GatewayTests.test_http_rejects_oversized_and_chunked_bodies) ... ok
+test_idempotency_atomic_replay_conflict_and_daily_usage (test_integrations.GatewayTests.test_idempotency_atomic_replay_conflict_and_daily_usage) ... ok
+test_invalid_options_source_passwords_and_split_modes (test_integrations.GatewayTests.test_invalid_options_source_passwords_and_split_modes) ... ok
+test_maintenance_durable_webhook_retries_and_account_scoping (test_integrations.GatewayTests.test_maintenance_durable_webhook_retries_and_account_scoping) ... ok
+test_mcp_modern_and_legacy_tools_permitted_paths (test_integrations.GatewayTests.test_mcp_modern_and_legacy_tools_permitted_paths) ... ok
+test_mcp_unsupported_versions_malformed_params_and_unknown_tools (test_integrations.GatewayTests.test_mcp_unsupported_versions_malformed_params_and_unknown_tools) ... ok
+test_output_quota_failure_is_persisted_and_cannot_download (test_integrations.GatewayTests.test_output_quota_failure_is_persisted_and_cannot_download) ... ok
+test_real_http_auth_origins_host_and_no_cors_wildcard (test_integrations.GatewayTests.test_real_http_auth_origins_host_and_no_cors_wildcard) ... ok
+test_real_http_bulk_upload_job_download_zip_link_and_cancel (test_integrations.GatewayTests.test_real_http_bulk_upload_job_download_zip_link_and_cancel) ... ok
+test_real_http_limits_and_unknown_routes (test_integrations.GatewayTests.test_real_http_limits_and_unknown_routes) ... ok
+test_real_stdio_mcp_process_framing_and_shutdown (test_integrations.GatewayTests.test_real_stdio_mcp_process_framing_and_shutdown) ... ok
+test_restart_keeps_completed_results_and_idempotency (test_integrations.GatewayTests.test_restart_keeps_completed_results_and_idempotency) ... ok
+test_restart_marks_reserved_job_failed_without_repeating_it (test_integrations.GatewayTests.test_restart_marks_reserved_job_failed_without_repeating_it) ... ok
+test_tenant_isolation_including_uploads_status_cancel_downloads_links (test_integrations.GatewayTests.test_tenant_isolation_including_uploads_status_cancel_downloads_links) ... ok
+test_upload_convert_result_zip_and_temporary_links (test_integrations.GatewayTests.test_upload_convert_result_zip_and_temporary_links) ... ok
+test_upload_limits_and_storage_quota (test_integrations.GatewayTests.test_upload_limits_and_storage_quota) ... ok
+test_webhook_signature_and_no_redirect_policy (test_integrations.GatewayTests.test_webhook_signature_and_no_redirect_policy) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 3.446s
+
+OK

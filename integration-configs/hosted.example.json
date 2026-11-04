@@ -1,0 +1,27 @@
+{
+  "data_dir": "/var/lib/puryf/data",
+  "read_roots": [],
+  "accounts": [
+    {
+      "id": "customer-a",
+      "token_env": "PURYF_CUSTOMER_A_KEY",
+      "max_jobs_day": 100,
+      "max_active_jobs": 4,
+      "max_storage_mb": 500,
+      "requests_per_minute": 120
+    }
+  ],
+  "port": 8765,
+  "allowed_origins": [
+    "http://localhost:8080"
+  ],
+  "allow_office": false,
+  "max_file_mb": 10,
+  "max_files": 20,
+  "retention_seconds": 86400,
+  "job_timeout_seconds": 900,
+  "mode": "hosted",
+  "allowed_hosts": [
+    "api.example.com"
+  ]
+}

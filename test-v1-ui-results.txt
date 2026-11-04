@@ -1,0 +1,8 @@
+test_arabic_mirrors_and_restores_layout_without_reversing_paths (test_v1_ui.V1DesktopTests.test_arabic_mirrors_and_restores_layout_without_reversing_paths) ... ok
+test_preset_and_pause_buttons_use_existing_service (test_v1_ui.V1DesktopTests.test_preset_and_pause_buttons_use_existing_service) ... ok
+test_studio_thumbnails_rotate_reorder_delete_and_save_selection (test_v1_ui.V1DesktopTests.test_studio_thumbnails_rotate_reorder_delete_and_save_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.576s
+
+OK

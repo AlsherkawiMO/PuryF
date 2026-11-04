@@ -1,0 +1,9 @@
+# Headless server preview; Office, Tk, OCR and external converters excluded.
+Pillow>=10
+pypdf>=6.1,<7
+reportlab>=4
+cryptography>=42
+arabic-reshaper>=3
+python-bidi>=0.6
+
+pypdfium2>=5,<6

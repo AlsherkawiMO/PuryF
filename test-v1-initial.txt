@@ -1,0 +1,27 @@
+test_best_effort_target_compression_reports_actual_result (test_v1.V1Tests.test_best_effort_target_compression_reports_actual_result) ... ok
+test_cancel_while_paused_closes_cleanly (test_v1.V1Tests.test_cancel_while_paused_closes_cleanly) ... ok
+test_compose_reorder_rotation_delete_extract_and_source_unchanged (test_v1.V1Tests.test_compose_reorder_rotation_delete_extract_and_source_unchanged) ... ok
+test_content_duplicates_preflight_and_preset_password_omission (test_v1.V1Tests.test_content_duplicates_preflight_and_preset_password_omission) ... ok
+test_course_pack_contents_links_bookmarks_numbering (test_v1.V1Tests.test_course_pack_contents_links_bookmarks_numbering) ... ok
+test_document_jobs_protect_sources_existing_outputs_and_invalid_refs (test_v1.V1Tests.test_document_jobs_protect_sources_existing_outputs_and_invalid_refs) ... ok
+test_explicit_converter_extension_writes_staged_pdf (test_v1.V1Tests.test_explicit_converter_extension_writes_staged_pdf) ... ok
+test_metadata_edit_remove_and_inspection (test_v1.V1Tests.test_metadata_edit_remove_and_inspection) ... ok
+test_naming_preserved_folders_hash_and_quality (test_v1.V1Tests.test_naming_preserved_folders_hash_and_quality) ... ok
+test_pause_between_files_then_resume (test_v1.V1Tests.test_pause_between_files_then_resume) ... ok
+test_pdf_preview_export_png_jpeg_and_text (test_v1.V1Tests.test_pdf_preview_export_png_jpeg_and_text) ... /workspace/scratch/2b475ed224dd/PuryF_v1/tests/test_v1.py:68: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpxdtsnr32/png/source-page-2.png'>
+  self.assertEqual(Image.open(result['outputs'][0]['path']).size,(200,300))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/2b475ed224dd/PuryF_v1/tests/test_v1.py:68: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpxdtsnr32/jpeg/source-page-2.jpeg'>
+  self.assertEqual(Image.open(result['outputs'][0]['path']).size,(200,300))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_schedule_once_per_bucket_and_background_control (test_v1.V1Tests.test_schedule_once_per_bucket_and_background_control) ... ok
+test_sdk_history_repeat_recent_folders_and_redacted_diagnostics (test_v1.V1Tests.test_sdk_history_repeat_recent_folders_and_redacted_diagnostics) ... ok
+test_v1_cli_document_inspect_preset_and_preflight (test_v1.V1Tests.test_v1_cli_document_inspect_preset_and_preflight) ... ok
+test_watch_stability_hash_dedupe_and_changed_content (test_v1.V1Tests.test_watch_stability_hash_dedupe_and_changed_content) ... ok
+test_watermark_header_footer_logo_and_numbers (test_v1.V1Tests.test_watermark_header_footer_logo_and_numbers) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.989s
+
+OK

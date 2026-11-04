@@ -1,0 +1,11 @@
+# Core desktop functionality. Windows Office routes also need installed Office.
+Pillow>=10
+pypdf>=6.1,<7
+reportlab>=4
+cryptography>=42
+tkinterdnd2>=0.4
+arabic-reshaper>=3
+python-bidi>=0.6
+pywin32>=306; sys_platform == "win32"
+
+pypdfium2>=5,<6

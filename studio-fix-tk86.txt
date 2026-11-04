@@ -1,0 +1,10 @@
+test_arabic_mirrors_and_restores_layout_without_reversing_paths (test_v1_ui.V1DesktopTests.test_arabic_mirrors_and_restores_layout_without_reversing_paths) ... ok
+test_preset_and_pause_buttons_use_existing_service (test_v1_ui.V1DesktopTests.test_preset_and_pause_buttons_use_existing_service) ... ok
+test_studio_navigation_loads_one_and_multiple_selected_pdfs (test_v1_ui.V1DesktopTests.test_studio_navigation_loads_one_and_multiple_selected_pdfs) ... ok
+test_studio_navigation_opens_empty_without_file_dialog (test_v1_ui.V1DesktopTests.test_studio_navigation_opens_empty_without_file_dialog) ... ok
+test_studio_thumbnails_rotate_reorder_delete_and_save_selection (test_v1_ui.V1DesktopTests.test_studio_thumbnails_rotate_reorder_delete_and_save_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 2.705s
+
+OK
