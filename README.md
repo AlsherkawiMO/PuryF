@@ -1,6 +1,7 @@
 <p align="center">
   <img src="assets/logo.png" width="140" alt="PuryF logo">
 </p>
+
 <h1 align="center">PuryF</h1>
 <p align="center"><strong>Your files. Simply PDF.</strong></p>
 
