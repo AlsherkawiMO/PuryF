@@ -1,7 +1,6 @@
 <p align="center">
   <img src="assets/logo.png" width="140" alt="PuryF Logo">
 </p>
-
 <h1 align="center">PuryF</h1>
 
 **Your files. Simply PDF.** Local conversion, PDF Studio and automation with an orange cat.
