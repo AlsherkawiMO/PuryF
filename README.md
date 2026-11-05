@@ -121,8 +121,8 @@ CAD conversion is not implemented. Run `puryf doctor` to check the converters av
 
 The README covers the everyday workflow. For more details, see:
 
-- [Detailed guide](DETAILED_GUIDE.md) — installation, PDF Studio, automation, CLI, Explorer, SDK, MCP, APIs and hosting considerations.
-- `TEST_REPORT.txt` and `WINDOWS_CHECKLIST.txt` — test evidence and remaining Windows checks.
+- [Detailed guide](docs/DETAILED_GUIDE.md) — installation, PDF Studio, automation, CLI, Explorer, SDK, MCP, APIs and hosting considerations.
+- [Test report](tests/reports/TEST_REPORT.txt) and [Windows checklist](docs/WINDOWS_CHECKLIST.txt) — test evidence and remaining Windows checks.
 - `THIRD_PARTY_NOTICES.md` — third-party license notices.
 
 ## About and license

@@ -28,11 +28,11 @@ PuryF is published by **AlsherkawiMO**.
 
 ## Screenshots
 
-![Main conversion screen](docs/screenshots/v1-main-dark.png)
+![Main conversion screen](../../docs/screenshots/v1-main-dark.png)
 
-![PDF Studio](docs/screenshots/v1-studio-dark.png)
+![PDF Studio](../../docs/screenshots/v1-studio-dark.png)
 
-![Arabic interface](docs/screenshots/v1-arabic-dark.png)
+![Arabic interface](../../docs/screenshots/v1-arabic-dark.png)
 
 ## Contents
 
@@ -836,7 +836,7 @@ behavior, busy-worker arrivals, fixed defaults, duplicate handling and dependenc
 The installer is compiled with NSIS. These tests run on Linux with Tk 8.6 and Tk 9.
 Actual Explorer invocation, Windows `msvcrt` locks, registry writes, installation,
 upgrade/deselection and uninstall must still be validated on Windows using
-[WINDOWS_CHECKLIST.txt](WINDOWS_CHECKLIST.txt). Office is tested with a lifecycle mock,
+[WINDOWS_CHECKLIST.txt](../../docs/WINDOWS_CHECKLIST.txt). Office is tested with a lifecycle mock,
 not an installed Microsoft Office application. This is a source preview; Windows release validation is pending.
 
 CLI commands are now available; see CLI.md. Conversion workers also acquire a per-user
@@ -977,7 +977,7 @@ new job. Key records expire with job retention, so reuse after expiry can create
 
 ## Endpoint contract
 
-[openapi.json](openapi.json) describes the routes; all `/v1` endpoints require a token.
+[openapi.json](../../openapi.json) describes the routes; all `/v1` endpoints require a token.
 JSON bodies are limited to 128 KiB. Files use a separate bounded binary upload.
 
 | Method and path | Result |
@@ -1069,7 +1069,7 @@ and up to five attempts with exponential delays. State survives restart; in-flig
 attempts are retried. Shutdown bounds its wait for a slow callback; an unfinished claimed delivery remains recoverable. Delivery is at least once, so receivers must tolerate duplicates.
 External receiver availability and egress must be tested on the deployment network.
 
-For public hosting, website integration and cost planning, see [HOSTING.md](HOSTING.md).
+For public hosting, website integration and cost planning, see [HOSTING.md](../../docs/HOSTING.md).
 
 
 

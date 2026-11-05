@@ -9,7 +9,7 @@
 5. [x] Run available regression checks: 121 tests on Tk 8.6 and 121 tests on Tk 9.
    [x] Run the bundled core check with Python removed from PATH; conversion, PDF/image export,
    MCP initialization and authenticated local API passed.
-   [ ] Run Verify_Clean_PC.bat on a fresh Windows VM/Sandbox and complete WINDOWS_CHECKLIST.txt.
+   [ ] Run Verify_Clean_PC.bat on a fresh Windows VM/Sandbox and complete docs/WINDOWS_CHECKLIST.txt.
 6. [x] Save the source release package and include per-file SHA256 checksums.
    [x] Publish-ready Windows binaries are in `release/`; the standalone installer is the main download.
 
@@ -19,7 +19,7 @@
 - Use bounded command timeouts; after a repeated failure capture its error and continue
   independent checks. Do not mark a failed check as passed.
 - Save a checkpoint before installing build tools or running a long build.
-- Use README.md for all tutorials; TEST_REPORT.txt and the actual test logs for evidence.
+- Use README.md for all tutorials; tests/reports/TEST_REPORT.txt and the actual test logs for evidence.
 
 ## Current release status
 

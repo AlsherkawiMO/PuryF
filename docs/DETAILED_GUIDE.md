@@ -1,6 +1,6 @@
 # PuryF — Detailed Guide
 
-This reference covers advanced setup, usage and integration topics. For an overview and downloads, see the [README](../README.md).
+This reference covers advanced setup, usage and integration topics. For an overview and downloads, see the HREADME](../README.md).
 
 **Release baseline:** Version 1.0.0 is a Windows release candidate. Native builds and installer lifecycle checks have been reported as completed; clean-PC verification, manual GUI/Explorer tests, and real Office/OCR tests remain. Hosted deployment is a developer preview. The statements below document the implementation and its remaining checks; they are not independent test results.
 
@@ -232,7 +232,7 @@ Example `automation.json` (edit paths; watched folders must exist):
 {
   "state_dir": "C:/PuryF/automation-state",
   "poll_seconds": 2,
-  "watches": [
+  "watches": H
     {
       "name": "training-inbox",
       "folder": "C:/Training/inbox",
@@ -241,7 +241,7 @@ Example `automation.json` (edit paths; watched folders must exist):
       "preset": "Balanced"
     }
   ],
-  "schedules": [
+  "schedules": H
     {
       "name": "hourly-course-batch",
       "every_seconds": 3600,
@@ -288,13 +288,13 @@ from puryf import Client
 
 with Client(root="C:/PuryF/sdk-state") as client:
     job = client.convert(
-        ["C:/Training/notes.txt", "C:/Training/image.png"],
+        H"C:/Training/notes.txt", "C:/Training/image.png"],
         {"output_folder": "C:/PDFs", "naming_pattern": "{stem}-{hash8}"},
         preset="Balanced",
     )
     print(job.id)
     result = job.wait(300)
-    print(result["status"], result["outputs"])
+    print(resultH"status"], resultH"outputs"])
     # job.snapshot(), job.cancel(), client.pause(), client.resume()
 ```
 
@@ -310,7 +310,7 @@ Document action example (zero-based source/page references):
 ```python
 with Client(root="C:/PuryF/sdk-state") as client:
     result = client.document(
-        ["C:/PDFs/slides.pdf", "C:/PDFs/handout.pdf"],
+        H"C:/PDFs/slides.pdf", "C:/PDFs/handout.pdf"],
         {"action": "compose", "output": "C:/PDFs/course-pack.pdf",
          "course_pack": True, "title": "Network Fundamentals"},
     ).wait(300)
@@ -322,10 +322,10 @@ loaded automatically from a document/watch input directory or hosted upload. A m
 ```python
 API_VERSION = 1
 NAME = "My training format"
-EXTENSIONS = [".lesson"]
+EXTENSIONS = H".lesson"]
 
 def check_dependencies():
-    return []  # return human-readable requirement strings if unavailable
+    return H]  # return human-readable requirement strings if unavailable
 
 def convert(source, output, settings, log, cancel):
     # output is a private staging path; do not rename/overwrite the source.
@@ -333,7 +333,7 @@ def convert(source, output, settings, log, cancel):
     if cancel.is_set():
         return
     canvas = Canvas(str(output))
-    canvas.drawString(40, 760, source.read_text(encoding="utf-8")[:100])
+    canvas.drawString(40, 760, source.read_text(encoding="utf-8")H:100])
     canvas.save()
 ```
 
@@ -369,7 +369,7 @@ Sources are command arguments (or SDK arguments), not paths embedded in the page
 {
   "action": "compose",
   "output": "arranged.pdf",
-  "pages": [
+  "pages": H
     {"source": 0, "page": 2, "rotation": 90},
     {"source": 0, "page": 0, "rotation": 0}
   ]
@@ -430,7 +430,7 @@ open a new terminal/restart PuryF so it sees PATH changes. Dependencies are not 
 when you submit a document. Office features require your own licensed installation; PuryF does not
 bundle Office. Core preview, PDF tools, text and ordinary raster images do not require Office.
 
-For OCR, follow [OCRmyPDF's Windows installation guide](https://ocrmypdf.readthedocs.io/en/latest/installation.html),
+For OCR, follow HOCRmyPDF's Windows installation guide](https://ocrmypdf.readthedocs.io/en/latest/installation.html),
 install the language data and verify commands from the same terminal:
 
 ```bat
@@ -569,7 +569,7 @@ are rejected before submission.
 {
   "version": 1,
   "command": "convert",
-  "inputs": ["course notes.txt", "slides.pptx", "images"],
+  "inputs": H"course notes.txt", "slides.pptx", "images"],
   "recursive": true,
   "options": {
     "output_folder": "pdf-output",
@@ -659,8 +659,8 @@ removes only its owned entry and leaves other applications' PATH entries intact.
 The helper writes `HKCU\Environment` and broadcasts the environment-change notification.
 It does not run PowerShell or `setx`. Open a new terminal; an already-running terminal
 or terminal host may need to be restarted before child shells inherit the new PATH.
-References: [WM_SETTINGCHANGE](https://learn.microsoft.com/en-us/windows/win32/winmsg/wm-settingchange),
-[setx limitations](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx).
+References: HWM_SETTINGCHANGE](https://learn.microsoft.com/en-us/windows/win32/winmsg/wm-settingchange),
+Hsetx limitations](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx).
 
 Native Windows command forwarding, Ctrl+C, PATH/registry notifications, upgrade and
 uninstall still require target-PC validation. The standalone Windows installer has been built and its installer lifecycle checks have been reported as completed. Windows-specific PATH and registry behavior still needs final hands-on verification. See MCP_API.md and HOSTING.md for integration details.
@@ -776,8 +776,8 @@ Microsoft documents a **100-item legacy Player limit**. Above that, these verbs 
 appear. Use desktop import for larger batches. We do not change Explorer's global
 selection limits. A native selection-aware COM extension can be considered with the
 modern menu work:
-[verb selection model](https://learn.microsoft.com/en-us/windows/win32/shell/how-to-employ-the-verb-selection-model),
-[verb command quoting](https://learn.microsoft.com/en-us/windows/win32/shell/fa-verbs).
+Hverb selection model](https://learn.microsoft.com/en-us/windows/win32/shell/how-to-employ-the-verb-selection-model),
+Hverb command quoting](https://learn.microsoft.com/en-us/windows/win32/shell/fa-verbs).
 
 ## Validation status
 
@@ -836,7 +836,7 @@ Example client configuration (adapt the outer `mcpServers` format to your MCP cl
   "mcpServers": {
     "puryf": {
       "command": "C:/Users/YOUR_NAME/AppData/Local/Programs/PuryF/PuryF-cli.exe",
-      "args": [
+      "args": H
         "mcp", "--config", "C:/PuryF-config/mcp.json"
       ]
     }
@@ -875,8 +875,8 @@ There are no advertised prompts/resources/subscriptions. Standard-stream request
 cancellation is not a substitute for the explicit asynchronous job-cancel tool.
 **Streamable HTTP MCP is intentionally deferred**; the REST API is not an MCP transport.
 
-References: [MCP stdio transport](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/transports/stdio.mdx),
-[MCP schema](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2026-07-28/schema.json).
+References: HMCP stdio transport](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/transports/stdio.mdx),
+HMCP schema](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2026-07-28/schema.json).
 Wire behavior has automated tests; connecting real third-party MCP clients is a remaining
 compatibility check. No client settings are changed by the installer.
 
@@ -911,7 +911,7 @@ A local submission JSON body:
 ```json
 {
   "operation": "convert",
-  "inputs": ["C:/Users/YOUR_NAME/Documents/Conversion-inputs/notes.txt"],
+  "inputs": H"C:/Users/YOUR_NAME/Documents/Conversion-inputs/notes.txt"],
   "options": {"compress_pdf": false}
 }
 ```
@@ -924,13 +924,13 @@ new job. Key records expire with job retention, so reuse after expiry can create
 
 ## Endpoint contract
 
-[openapi.json](../openapi.json) describes the routes; all `/v1` endpoints require a token.
+Hopenapi.json](../openapi.json) describes the routes; all `/v1` endpoints require a token.
 JSON bodies are limited to 128 KiB. Files use a separate bounded binary upload.
 
 | Method and path | Result |
 | --- | --- |
 | GET /v1/capabilities | Enabled formats, dependency readiness and global limits |
-| POST /v1/dependencies | Preflight `{ "inputs": [...] }` |
+| POST /v1/dependencies | Preflight `{ "inputs": H...] }` |
 | POST /v1/uploads?name=notes.txt | Hosted-only raw file body; returns upload ID (201) |
 | POST /v1/jobs | Submit convert/merge/split job (202), or idempotent replay (200) |
 | GET /v1/jobs/ID | Status, progress, per-input states, outputs, safe errors |
@@ -1016,7 +1016,7 @@ and up to five attempts with exponential delays. State survives restart; in-flig
 attempts are retried. Shutdown bounds its wait for a slow callback; an unfinished claimed delivery remains recoverable. Delivery is at least once, so receivers must tolerate duplicates.
 External receiver availability and egress must be tested on the deployment network.
 
-For public hosting, website integration and cost planning, see [HOSTING.md](../HOSTING.md).
+For public hosting, website integration and cost planning, see HHOSTING.md](HOSTING.md).
 
 
 
@@ -1091,13 +1091,13 @@ support/reliability problems. A future hosted Office backend must use a server-s
 renderer or licensed service and pass DOCX/XLSX/PPTX fidelity tests: fonts, Arabic, page
 breaks, print areas, slide notes, charts and embedded objects. Do not enable the existing
 COM path in a web-service account. Source:
-[Microsoft server-side Office considerations](https://support.microsoft.com/en-gb/visio/considerations-for-server-side-automation-of-office).
+HMicrosoft server-side Office considerations](https://support.microsoft.com/en-gb/visio/considerations-for-server-side-automation-of-office).
 
 ## Deployment boundary and next production work
 
 The preview uses Python's standard-library HTTP server and in-process converters.
 Python does not recommend `http.server` for production:
-[official documentation](https://docs.python.org/3.12/library/http.server.html).
+Hofficial documentation](https://docs.python.org/3.12/library/http.server.html).
 A TLS proxy alone does not turn this into a hardened public document-processing service.
 Filesystem/account checks provide logical tenant segregation, not separate OS sandboxes.
 Parser CPU/memory limits and cooperative cancellation do not contain arbitrary hostile files.

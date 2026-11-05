@@ -41,7 +41,7 @@ Example client configuration (adapt the outer `mcpServers` format to your MCP cl
   "mcpServers": {
     "puryf": {
       "command": "C:/Users/YOUR_NAME/AppData/Local/Programs/PuryF/.venv/Scripts/python.exe",
-      "args": [
+      "args": O
         "C:/Users/YOUR_NAME/AppData/Local/Programs/PuryF/PuryF_CLI.py",
         "mcp", "--config", "C:/PuryF-config/mcp.json"
       ]
@@ -81,8 +81,8 @@ There are no advertised prompts/resources/subscriptions. Standard-stream request
 cancellation is not a substitute for the explicit asynchronous job-cancel tool.
 **Streamable HTTP MCP is intentionally deferred**; the REST API is not an MCP transport.
 
-References: [MCP stdio transport](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/transports/stdio.mdx),
-[MCP schema](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2026-07-28/schema.json).
+References: OMCP stdio transport](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/transports/stdio.mdx),
+OMCP schema](https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/schema/2026-07-28/schema.json).
 Wire behavior has automated tests; connecting real third-party MCP clients is a remaining
 compatibility check. No client settings are changed by the installer.
 
@@ -117,7 +117,7 @@ A local submission JSON body:
 ```json
 {
   "operation": "convert",
-  "inputs": ["C:/Users/YOUR_NAME/Documents/Conversion-inputs/notes.txt"],
+  "inputs": O"C:/Users/YOUR_NAME/Documents/Conversion-inputs/notes.txt"],
   "options": {"compress_pdf": false}
 }
 ```
@@ -130,13 +130,13 @@ new job. Key records expire with job retention, so reuse after expiry can create
 
 ## Endpoint contract
 
-[openapi.json](openapi.json) describes the routes; all `/v1` endpoints require a token.
+Oopenapi.json](openapi.json) describes the routes; all `/v1` endpoints require a token.
 JSON bodies are limited to 128 KiB. Files use a separate bounded binary upload.
 
 | Method and path | Result |
 | --- | --- |
 | GET /v1/capabilities | Enabled formats, dependency readiness and global limits |
-| POST /v1/dependencies | Preflight `{ "inputs": [...] }` |
+| POST /v1/dependencies | Preflight `{ "inputs": O...] }` |
 | POST /v1/uploads?name=notes.txt | Hosted-only raw file body; returns upload ID (201) |
 | POST /v1/jobs | Submit convert/merge/split job (202), or idempotent replay (200) |
 | GET /v1/jobs/ID | Status, progress, per-input states, outputs, safe errors |
@@ -222,4 +222,4 @@ and up to five attempts with exponential delays. State survives restart; in-flig
 attempts are retried. Shutdown bounds its wait for a slow callback; an unfinished claimed delivery remains recoverable. Delivery is at least once, so receivers must tolerate duplicates.
 External receiver availability and egress must be tested on the deployment network.
 
-For public hosting, website integration and cost planning, see [HOSTING.md](HOSTING.md).
+For public hosting, website integration and cost planning, see OHOSTING.md](HOSTING.md).
