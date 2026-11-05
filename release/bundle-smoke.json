@@ -16,6 +16,6 @@
       "authenticated local API"
     ],
     "external_converters": "not tested; Office/OCR/media tools remain separate installations",
-    "executable_sha256": "19068351479f2db7bc2b008d9e8b1ad0896e3f32a0050cf91f5833472f317e13"
+    "executable_sha256": "e31dc752fca4e6f8dca0fac2ee75a6c4261d395a5aff2ff0e975dab7da3a8fc4"
   }
 }
