@@ -1,6 +1,6 @@
 # PuryF — Detailed Guide
 
-This reference covers advanced setup, usage and integration topics. For an overview and downloads, see the HREADME](../README.md).
+This reference covers advanced setup, usage and integration topics. For an overview and downloads, see the [README](../README.md).
 
 **Release baseline:** Version 1.0.0 is a Windows release candidate. Native builds and installer lifecycle checks have been reported as completed; clean-PC verification, manual GUI/Explorer tests, and real Office/OCR tests remain. Hosted deployment is a developer preview. The statements below document the implementation and its remaining checks; they are not independent test results.
 

@@ -2,6 +2,12 @@ __pycache__/
 *.py[cod]
 .venv/
 .build-venv/
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+coverage.xml
+*.coverage
+*.egg-info/
 build/
 dist/
 work/

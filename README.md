@@ -122,8 +122,12 @@ CAD conversion is not implemented. Run `puryf doctor` to check the converters av
 The README covers the everyday workflow. For more details, see:
 
 - [Detailed guide](docs/DETAILED_GUIDE.md) — installation, PDF Studio, automation, CLI, Explorer, SDK, MCP, APIs and hosting considerations.
+- [CLI reference](docs/CLI.md) — commands, request files, exit codes and diagnostics.
+- [Architecture](docs/ARCHITECTURE.md) — package boundaries, job lifecycle and integration contracts.
+- [Explorer integration](docs/EXPLORER.md) — Windows context-menu and shell behavior.
+- [MCP/API reference](docs/MCP_API.md) and [hosting notes](docs/HOSTING.md) — optional local and hosted integrations.
 - [Test report](tests/reports/TEST_REPORT.txt) and [Windows checklist](docs/WINDOWS_CHECKLIST.txt) — test evidence and remaining Windows checks.
-- `THIRD_PARTY_NOTICES.md` — third-party license notices.
+- [Contributing](CONTRIBUTING.md), [change history](CHANGELOG.md), and `THIRD_PARTY_NOTICES.md` — project maintenance and licensing information.
 
 ## About and license
 
