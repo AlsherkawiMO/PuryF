@@ -1,6 +1,6 @@
 PuryF v1 standalone release gate
 
-[ ] Build on native 64-bit Windows using Build_Standalone_Windows.bat (Python 3.12 + NSIS).
+[ ] Build on native 64-bit Windows using scripts/build/Build_Standalone_Windows.bat (Python 3.12 + NSIS).
 [ ] Verify main installer and portable ZIP include both EXEs, runtime, assets and notices.
 [ ] Test on a clean Windows VM with no Python: run Verify_Clean_PC.bat, then GUI conversion.
 [ ] Test fresh/upgrade/uninstall, Explorer opt-in, PATH opt-in and profile preservation.
@@ -25,7 +25,7 @@ Final checks on the target Windows PC
 [ ] Verify optional Calibre, draw.io, Whisper/FFmpeg and video routes if needed.
 [ ] Stop a long conversion and close while work is active; confirm clean shutdown.
 [ ] Restart and verify queue/settings restore, with passwords excluded.
-[ ] Run Verify_Windows.bat for repeatable automated regression checks.
+[ ] Run scripts/test/Verify_Windows.bat for repeatable automated regression checks.
 
 These physical/Windows-specific checks have not been completed in the Linux development environment.
 

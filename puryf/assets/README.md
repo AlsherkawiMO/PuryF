@@ -108,7 +108,7 @@ needed. PyInstaller must run on the target OS; Linux output is not a Windows EXE
 
 1. Extract this complete source folder to a path with enough temporary disk space.
 2. Install Python 3.12 (Tk, pip, venv, launcher) and NSIS on the **build** machine.
-3. Double-click **Build_Standalone_Windows.bat**. It creates a private `.build-venv`, installs core
+3. Double-click **scripts/build/Build_Standalone_Windows.bat**. It creates a private `.build-venv`, installs core
    dependencies/PyInstaller, builds GUI + console applications, and runs a bundled-core smoke test.
 4. It copies README, assets, templates, examples and collected third-party license texts, then creates:
    `release/PuryF-v1-Setup.exe`, `release/PuryF-v1-Windows-portable.zip`, `SHA256SUMS.txt`,

@@ -99,7 +99,7 @@ py -3.12 -m venv .venv
 .venv\Scripts\python.exe PuryF.py
 ```
 
-To build the standalone release on Windows, install NSIS as well, then run `Build_Standalone_Windows.bat`. The build produces its installer, portable ZIP and checksums in `release/`. Full build and verification instructions are in the [detailed guide](docs/DETAILED_GUIDE.md).
+To build the standalone release on Windows, install NSIS as well, then run `scripts/build/Build_Standalone_Windows.bat`. The build produces its installer, portable ZIP and checksums in `release/`. Full build and verification instructions are in the [detailed guide](docs/DETAILED_GUIDE.md).
 
 ## Optional tools and supported formats
 

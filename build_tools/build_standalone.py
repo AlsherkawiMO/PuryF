@@ -28,7 +28,7 @@ def licenses(destination):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--native-smoke-only',action='store_true');args=parser.parse_args()
-    if sys.platform!='win32' and not args.native_smoke_only:raise SystemExit('Windows EXEs must be built on Windows. Run Build_Standalone_Windows.bat there.')
+    if sys.platform!='win32' and not args.native_smoke_only:raise SystemExit('Windows EXEs must be built on Windows. Run scripts/build/Build_Standalone_Windows.bat there.')
     required=('PIL','pypdf','pypdfium2','reportlab','cryptography','arabic_reshaper','bidi','tkinter')
     missing=[name for name in required if importlib.util.find_spec(name) is None]
     if missing:raise SystemExit('Missing build dependencies: '+', '.join(missing)+'. Install requirements.txt before building.')
