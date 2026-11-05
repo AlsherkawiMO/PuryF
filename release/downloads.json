@@ -2,6 +2,5 @@
   "version": "1.0.0",
   "main_download": "PuryF-v1-Setup.exe",
   "portable": "PuryF-v1-Windows-portable.zip",
-  "source_fallback": "PuryF-v1-Source-Setup.exe",
-  "status": "candidate; bundled core check passed without Python on PATH; run Verify_Clean_PC.bat on a fresh Windows VM/Sandbox before publishing"
+  "status": "candidate; run Verify_Clean_PC.bat on Windows without Python before publishing"
 }

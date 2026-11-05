@@ -1,3 +1,2 @@
-d9744f2ba730adb59046dddb6de99bf8471512db73608b4989138362a82e0b51  PuryF-v1-Setup.exe
-2f7fabce0a6be170baa5b36e743ab68bdf8579b06f77a913246bb8f31855cbb9  PuryF-v1-Windows-portable.zip
-ad5f4beaae309ce3b19841bedbe1c3409bc2f8a37ec64250fa3da124b06fc676  PuryF-v1-Source-Setup.exe
+93a32722c086db062e893680a0a9033ac71ed32047f5ea1cf9552e9cd6bafb07  PuryF-v1-Setup.exe
+8495d05655e8ef26049326fadc551b757bb408c7dc72497ffb5e0d34a1a0e476  PuryF-v1-Windows-portable.zip

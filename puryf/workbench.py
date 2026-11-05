@@ -20,7 +20,9 @@ class WorkbenchMixin:
         self.preset_name=tk.StringVar(value='Original')
         self.notifications=tk.BooleanVar(value=self.v1_store.get('notifications',False))
     def build_v1(self,nav,header,run):
-        ttk.Button(header,text='العربية / English',command=self.toggle_language).grid(row=0,column=3,rowspan=2,padx=5)
+        # Keep the language control beside, rather than on top of, the theme toggle.
+        # desktop.App owns column 3 for the Dark/Light theme button.
+        ttk.Button(header,text='العربية / English',command=self.toggle_language).grid(row=0,column=4,rowspan=2,padx=5)
         for row,label,command in [(5,'PDF Studio',self.open_studio),(6,'Automation',self.automation_window),(7,'History',self.history_window),(8,'README / tutorials',self.open_readme)]:
             ttk.Button(nav,text=label,width=18,style='Nav.TButton',command=command).grid(row=row,column=0,sticky='ew',pady=3)
         self.pause_button=ttk.Button(run,text='Pause between files',command=self.toggle_pause);self.pause_button.grid(row=3,column=1,columnspan=2,sticky='e',pady=(7,0))
